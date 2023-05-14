@@ -1,0 +1,23 @@
+{
+    "usuarios":[
+        {
+            "id":1,
+            "nombre":"harol",
+            "apellido":"soza",
+            "numeroT":3246460948,
+            "idUs":1038771647,
+            "direccion":"adsdfsghj",
+            "estrato":2,
+            "correo": "juansoza21@mail.com",
+            "contraseña":"12345",
+            "tipoTIuser": "admin",
+            "consumo":[
+                {
+                    "frecuenciaPulsos":46,
+                    "caudal":6.133,
+                    "litrosH":368
+                }
+            ]
+        }
+    ]
+}
