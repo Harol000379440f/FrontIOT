@@ -1,27 +1,10 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { axiosController } from "../helper/axios";
-const consumoC = createContext({});
-export const ConsumoContext = (props) => {
-  const [data, setData] = useState([]);
-  const [dataUser, setDataUser] = useState([]);
-  useEffect(() => {
-    axiosController.get("/usuarios").then((response) => {
-      setData(response.data);
-    });
-  }, []);
+import { createContext, useContext, useState } from "react";
+const UsersConsumoContext = createContext({});
 
-  const onlogin = () => {
-    axiosController.post("/usuarios").then((response) => {
-      setDataUser(response.data);
-    });
-  };
-
-  return (
-    <ConsumoC.Provider value={{ data, setData, dataUser }}>
-      {props.children}
-    </ConsumoC.Provider>
-  );
+export const consumoContext = () => {
+  /*  const [] */
+  return <div>consumoContext</div>;
 };
-export const useConsumoC = () => {
-  return useContext(consumoC);
+export const useConsumoContext = () => {
+  return useContext(UsersConsumoContext);
 };

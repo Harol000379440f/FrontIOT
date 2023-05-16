@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { axiosController } from "../helper/axios";
-import { ConsumoContext } from "../context/consumoContext";
+import { axiosController } from "../helper/axiosControler";
+/* import { ConsumoContext } from "../context/consumoContext"; */
 
 export const Login = () => {
-  const { onlogin } = useContext(ConsumoContext);
+  /*  const { onlogin } = useContext(ConsumoContext); */
   const [inputUsuario, setinputUsuario] = useState("");
   const [inputCorreo, setinputCorreo] = useState("");
   const [inputPassword, setinputPassword] = useState("");
