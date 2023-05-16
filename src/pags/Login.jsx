@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { axiosController } from "../helper/axios";
+import { ConsumoContext } from "../context/consumoContext";
 
 export const Login = () => {
+  const { onlogin } = useContext(ConsumoContext);
   const [inputUsuario, setinputUsuario] = useState("");
   const [inputCorreo, setinputCorreo] = useState("");
   const [inputPassword, setinputPassword] = useState("");
@@ -11,7 +13,8 @@ export const Login = () => {
     if (inputUsuario === "" || inputCorreo === "" || inputPassword === "") {
       console.log("Debe completar todos los campos");
     } else {
-      axiosController
+      onlogin;
+      /*       axiosController
         .post("/usuarios", {
           nombre: inputUsuario,
           correo: inputCorreo,
@@ -23,7 +26,7 @@ export const Login = () => {
             navigate("/Consumo");
           }, 2000);
         })
-        .catch((error) => console.log(error));
+        .catch((error) => console.log(error)); */
     }
   };
   const formulario = (event) => {
